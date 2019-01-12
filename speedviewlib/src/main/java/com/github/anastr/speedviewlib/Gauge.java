@@ -34,7 +34,7 @@ public abstract class Gauge extends View {
 
     private Paint speedUnitTextBitmapPaint =  new Paint(Paint.ANTI_ALIAS_FLAG);
     protected TextPaint textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-    private TextPaint speedTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG),
+    public TextPaint speedTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG),
             unitTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
     /** the text after speedText */
     private String unit = "Km/h";
