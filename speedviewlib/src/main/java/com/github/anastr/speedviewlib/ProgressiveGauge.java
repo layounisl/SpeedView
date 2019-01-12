@@ -18,7 +18,7 @@ public class ProgressiveGauge extends LinearGauge {
     /** the shape */
     private Path path = new Path();
 
-    private Paint frontPaint = new Paint(Paint.ANTI_ALIAS_FLAG)
+    public Paint frontPaint = new Paint(Paint.ANTI_ALIAS_FLAG)
             , backPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     public ProgressiveGauge(Context context) {

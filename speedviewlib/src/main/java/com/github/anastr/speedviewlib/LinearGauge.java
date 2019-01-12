@@ -64,7 +64,7 @@ public abstract class LinearGauge extends Gauge {
     }
 
     @Override
-    protected void updateBackgroundBitmap() {
+    public void updateBackgroundBitmap() {
         updateFrontAndBackBitmaps();
     }
 
