@@ -155,4 +155,45 @@ public class ProgressiveGauge extends LinearGauge {
         updateBackgroundBitmap();
         invalidate();
     }
+
+
+    /**
+     * @return foreground progress shader.
+     */
+    public Shader getSpeedometerLinearGradiant() {
+        return frontPaint.getShader();
+    }
+
+    /**
+     * change the color of progress.
+     * @param linearGradiant new linear gradiant color.
+     */
+    public void setSpeedometerLinearGradiant(LinearGradient linearGradiant) {
+        frontPaint.setShader(linearGradiant);
+        if (!isAttachedToWindow())
+            return;
+        updateBackgroundBitmap();
+        invalidate();
+    }
+
+    /**
+     * @return background progress shader.
+     */
+    public Shader getSpeedometerBackLinearGradiant() {
+        return backPaint.getShader();
+    }
+
+    /**
+     * change the color of background progress.
+     * @param linearGradient new color.
+     */
+    public void setSpeedometerBackGradiantLinear(LinearGradient linearGradient) {
+        backPaint.setShader(linearGradient);
+        if (!isAttachedToWindow())
+            return;
+        updateBackgroundBitmap();
+        invalidate();
+    }
+
+
 }
