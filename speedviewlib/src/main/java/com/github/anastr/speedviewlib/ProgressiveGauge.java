@@ -3,8 +3,10 @@ package com.github.anastr.speedviewlib;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.LinearGradient;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Shader;
 import android.util.AttributeSet;
 
 /**
