@@ -553,7 +553,7 @@ public abstract class Gauge extends View {
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void speedTo(float speed, long moveDuration) {
-        speed = (speed > maxSpeed) ? maxSpeed : (speed < minSpeed) ? minSpeed : speed;
+        speed = (speed > maxSpeed) ? speed : (speed < minSpeed) ? minSpeed : speed;
         if (speed == this.speed)
             return;
         this.speed = speed;
