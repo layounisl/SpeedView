@@ -566,7 +566,7 @@ public abstract class Gauge extends View {
         isSpeedIncrease = speed > currentSpeed;
 
         cancelSpeedAnimator();
-        speedAnimator = ValueAnimator.ofFloat(currentSpeed, speed > maxSpeed ? maxSpeed : speed);
+        speedAnimator = ValueAnimator.ofFloat(currentSpeed, speed);
         speedAnimator.setInterpolator(new DecelerateInterpolator());
         speedAnimator.setDuration(moveDuration);
         speedAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
