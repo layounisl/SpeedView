@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.text.TextPaint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
@@ -479,7 +480,7 @@ public abstract class Gauge extends View {
      * @param speed current speed to move.
      */
     public void setSpeedAt(float speed) {
-        speed = (speed > maxSpeed) ? maxSpeed : (speed < minSpeed) ? minSpeed : speed;
+        speed = (speed > maxSpeed) ? speed : (speed < minSpeed) ? minSpeed : speed;
         isSpeedIncrease = speed > currentSpeed;
         this.speed = speed;
         this.currentSpeed = speed;
@@ -553,7 +554,7 @@ public abstract class Gauge extends View {
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void speedTo(float speed, long moveDuration) {
-        speed = (speed > maxSpeed) ? speed : (speed < minSpeed) ? minSpeed : speed;
+        speed = (speed > maxSpeed) ? maxSpeed : (speed < minSpeed) ? minSpeed : speed;
         if (speed == this.speed)
             return;
         this.speed = speed;
